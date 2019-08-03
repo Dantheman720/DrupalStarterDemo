@@ -22,3 +22,6 @@
 
 # Ignore .env files as they are personal
 /.env
+/web/themes/custom/recipemanager/js/scripts-bundled.js
+/web/themes/custom/recipemanager/package-lock.json
+/web/themes/custom/recipemanager/node_modules/

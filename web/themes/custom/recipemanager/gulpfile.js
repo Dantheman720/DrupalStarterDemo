@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-settings = require('./settings'),
+config = require('./config'),
 webpack = require('webpack'),
 browserSync = require('browser-sync').create(),
 postcss = require('gulp-postcss'),
@@ -12,10 +12,10 @@ mixins = require('postcss-mixins'),
 colorFunctions = require('postcss-color-function');
 
 gulp.task('styles', function() {
-  return gulp.src(settings.themeLocation + './css/style.css')
+  return gulp.src(config.themeLocation + 'css/main/style.css')
     .pipe(postcss([cssImport, mixins, cssvars, nested, rgba, colorFunctions, autoprefixer]))
     .on('error', (error) => console.log(error.toString()))
-    .pipe(gulp.dest(settings.themeLocation));
+    .pipe(gulp.dest(config.themeLocation));
 });
 
 gulp.task('scripts', function(callback) {
@@ -30,18 +30,18 @@ gulp.task('scripts', function(callback) {
 });
 
 gulp.task('watch', function() {
-  console.log(settings.themeLocation);
+  console.log(config.themeLocation);
   browserSync.init({
     notify: false,
-    proxy: settings.urlToPreview,
+    proxy: config.urlToPreview,
     ghostMode: false
   });
 
   gulp.watch('./**/*.php', function() {
     browserSync.reload();
   });
-  gulp.watch(settings.themeLocation + 'css/**/*.scss', ['waitForStyles']);
-  gulp.watch([settings.themeLocation + 'assets/js/modules/*.js', settings.themeLocation + 'assets/js/scripts.js'], ['waitForScripts']);
+  gulp.watch(config.themeLocation + 'css/**/*.scss', ['waitForStyles']);
+  gulp.watch([config.themeLocation + 'js/modules/*.js', config.themeLocation + 'js/scripts.js'], ['waitForScripts']);
 });
 
 gulp.task('waitForStyles', ['styles'], function() {

@@ -5,6 +5,6 @@ global-styling:
 
 global-js:
   js:
-    js/main.js: {}
+    js/scripts-bundled.js: {}
   dependencies:
     - core/jquery
