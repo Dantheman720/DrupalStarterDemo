@@ -1,0 +1,15 @@
+name: First Turn Demo
+type: theme
+description: 'A fun theme for demonstrating themes!'
+core: 8.x
+libraries:
+  - firstturndemo/global-styling
+  - firstturndemo/global-js
+stylesheets-remove:
+  - core/themes/stable/css/views/views.module.css
+
+regions:
+  content: 'Main Content'
+  header: 'Header'
+  footer: 'Footer'
+  sidebar: 'Sidebar'
