@@ -1,7 +1,129 @@
-.WOW {
-  display: block;
+.site-header {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  background: #100e17;
+}
+
+.navigation {
+  height: 100px;
+  width: 100%;
+}
+
+.header-middle {
+  grid-column: 3/7;
+}
+
+.nav-list {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+.nav-list .nav-item {
+  text-transform: uppercase;
   font-size: 2rem;
-  color: red;
+}
+.nav-list .nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 16rem)) minmax(6rem, 1fr);
+  grid-row-gap: 1.6rem;
+  margin-top: 1.6rem;
+}
+
+.ftd-main-content {
+  grid-column: 1/-1;
+  padding: 1rem;
+}
+
+.heading-front-page {
+  text-align: center;
+}
+
+.featured-hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.featured-content-card {
+  box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.featured-content-card-heading {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.featured-content-card-content, .featured-content-card-author {
+  font-size: 2rem;
+}
+
+.featured-content-card-author {
+  font-weight: 700;
+}
+
+.secondary-content-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 3rem 0;
+}
+.secondary-content-list h1 {
+  text-align: center;
+  font-size: 4rem;
+  grid-column: 1/-1;
+}
+
+.item-list {
+  grid-column: 2/4;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  border-bottom: 0.2rem dashed #8f8d8d;
+  font-size: 1.6rem;
+  align-content: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.item .item-title {
+  font-size: 2rem;
+}
+.item .item-title a {
+  text-decoration: none;
+}
+.item .item-date {
+  color: grey;
+}
+.item .item-image {
+  grid-column: 1;
+}
+.item .item-content {
+  grid-column: 2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=style.css.map */

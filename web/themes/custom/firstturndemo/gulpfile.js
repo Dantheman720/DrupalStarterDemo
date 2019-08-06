@@ -37,7 +37,10 @@ gulp.task('watch', function() {
     ghostMode: false
   });
 
-  gulp.watch('./**/*.php', function() {
+  gulp.watch('./**/*.twig', function() {
+    browserSync.reload();
+  });
+  gulp.watch('./**/*.scss', function() {
     browserSync.reload();
   });
   gulp.watch(config.themeLocation + 'css/**/*.scss', ['waitForStyles']);
