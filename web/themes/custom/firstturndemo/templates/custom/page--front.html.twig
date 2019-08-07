@@ -1,0 +1,46 @@
+<header class="site-header" role="banner">
+  <div class="header-middle">
+
+  <nav class="navigation">
+    <ul class="nav-list">
+      <li class="nav-item"><a href="/articles">Articles</a></li>
+      <li class="nav-item"><a href="#">Books</a></li>
+      <li class="nav-item"><a href="#">Events</a></li>
+      <li class="nav-item"><a href="#">Team</a></li>
+    </ul>
+  </nav>
+  </div>
+</header>
+
+
+<div class="container">
+
+
+  <main class="ftd-main-content" role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+
+    <h1 class="heading-front-page">Featured this Week!</h1>
+
+    <div class="featured-hero">
+      {{ page.featured_articles }}
+
+    </div>
+
+    <div class="secondary-content-list">
+      <h1>Check out our other content</h1>
+      <ul class="item-list">
+        {{ page.content }}
+      </ul>
+
+    </div>
+
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}

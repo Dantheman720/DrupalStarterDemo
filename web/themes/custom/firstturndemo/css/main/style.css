@@ -65,6 +65,9 @@
   font-size: 4rem;
   text-align: center;
 }
+.featured-content-card-heading a {
+  text-decoration: none;
+}
 
 .featured-content-card-content, .featured-content-card-author {
   font-size: 2rem;
@@ -113,6 +116,39 @@
 }
 .item .item-content {
   grid-column: 2;
+}
+
+.article-item {
+  font-size: 1.6rem;
+  margin: 3rem 0;
+}
+.article-item .heading {
+  font-size: 3rem;
+}
+.article-item .heading a {
+  text-decoration: none;
+  color: #333;
+}
+.article-item .date {
+  color: #666;
+}
+
+.pager__items {
+  font-size: 2rem;
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+  padding-top: 3rem;
+}
+.pager__items li.is-active a {
+  text-decoration: underline;
+}
+.pager__items a, .pager__items a:visited {
+  border: 0.1rem solid #666;
+  color: #333;
+  text-decoration: none;
+  border-radius: 1rem;
+  padding: 2rem;
 }
 
 body {
