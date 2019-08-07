@@ -25,3 +25,4 @@
 /web/themes/custom/firstturndemo/node_modules/
 /web/themes/custom/firstturndemo/package-lock.json
 /web/themes/custom/firstturndemo/js/scripts-bundled.js
+/composer.lock
