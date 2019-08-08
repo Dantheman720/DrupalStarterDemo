@@ -1,3 +1,3 @@
-import Tester from './modules/Tester'
+import Navigation from './modules/navigation'
 
-let tester = new Tester();
+let navigation = new Navigation();

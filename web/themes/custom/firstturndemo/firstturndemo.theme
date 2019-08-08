@@ -4,7 +4,7 @@
 
 function firstturndemo_preprocess(&$variables, $hook)
 {
-  if($hook == 'page'){
+  if($hook == 'block'){
 
 //    xdebug_break();
   }
@@ -24,20 +24,3 @@ function firstturndemo_preprocess_node(&$variables)
 }
 
 
-/**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function firstturndemo_theme_suggestions_page_alter(array &$suggestions, array $variables)
-{
-  $node = \Drupal::request()->attributes->get('node');
-
-  if (!is_null($node) && method_exists($node, 'getType')) {
-    $new_suggestion = 'page__' . $node->getType();
-
-    if (!in_array($new_suggestion, $suggestions)) {
-      $suggestions[] = $new_suggestion;
-    }
-  }
-
-  return $suggestions;
-}

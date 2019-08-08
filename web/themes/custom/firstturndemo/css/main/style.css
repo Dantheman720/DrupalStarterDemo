@@ -47,6 +47,7 @@
 
 .heading-front-page {
   text-align: center;
+  font-size: 3rem;
 }
 
 .featured-hero {
@@ -56,21 +57,28 @@
 }
 
 .featured-content-card {
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid #cdcdcd;
   box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.3);
   padding: 2rem;
   cursor: pointer;
+  min-height: 500px;
+  transition: all 0.2s;
+  justify-content: space-around;
+  align-items: center;
+}
+.featured-content-card:hover {
+  transform: scale(1.02);
 }
 
 .featured-content-card-heading {
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-align: center;
-}
-.featured-content-card-heading a {
-  text-decoration: none;
 }
 
 .featured-content-card-content, .featured-content-card-author {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .featured-content-card-author {

@@ -22,8 +22,10 @@
  * @see template_preprocess_username()
  */
 #}
+{% set user_class = 'author' %}
+
 {% if link_path -%}
-  <a{{ attributes }}>{{ name }}{{ extra }}</a>
+  <a{{ attributes.addClass(user_class) }}>{{ name }}{{ extra }}</a>
 {%- else -%}
-  <span{{ attributes }}>{{ name }}{{ extra }}</span>
+  <span{{ attributes.addClass(user_class) }}>{{ name }}{{ extra }}</span>
 {%- endif -%}
