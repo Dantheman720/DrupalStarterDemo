@@ -1,0 +1,40 @@
+.event-item {
+  font-size: 1.6rem;
+  margin: 3rem 0;
+
+  .event-heading {
+    font-size: 3rem;
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+  }
+
+  .event-date {
+    color: #666;
+  }
+
+  .event-speakers {
+    font-weight: 700;
+  }
+
+
+  .speaker {
+    padding: .5rem 0;
+  }
+
+  .speaker-info {
+    display: none;
+
+    & > * {
+      padding: 1rem 0;
+    }
+  }
+
+  .event-speakers-info {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+}

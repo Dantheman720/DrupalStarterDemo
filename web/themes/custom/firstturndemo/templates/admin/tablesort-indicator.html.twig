@@ -7,12 +7,10 @@
  * - style: Either 'asc' or 'desc', indicating the sorting direction.
  */
 #}
-{%
-  set classes = [
-    'tablesort',
-    'tablesort--' ~ style,
-  ]
-%}
+{% set classes = [
+  'tablesort',
+  'tablesort--' ~ style,
+] %}
 <span{{ attributes.addClass(classes) }}>
   <span class="visually-hidden">
     {% if style == 'asc' -%}

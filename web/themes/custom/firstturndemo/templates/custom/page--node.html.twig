@@ -1,0 +1,18 @@
+{% include directory ~ '/templates/partials/header.html.twig' %}
+
+<div class="container">
+
+
+  <article class="main_page-content" role="main">
+    {{ page.content }}
+  </article>
+
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}
+
+

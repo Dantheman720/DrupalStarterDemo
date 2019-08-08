@@ -1,0 +1,12 @@
+{% set event_url = content.field_event_url.0['#url_title'] %}
+
+<div class="event-item">
+  <h3 class="event-heading"><a href={{ event_url }}>{{ node_title }}</a></h3>
+  <p class="event-date">{{ content.field_start_date }}</p>
+  <div class="event-content">{{ content.body }}</div>
+  <p class="event-speakers">Event Speakers:</p>
+  <div class="event-speakers-info">
+    {{ content.field_event_speaker }}
+  </div>
+
+</div>

@@ -13,12 +13,10 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'layout',
-    'layout--threecol-33-34-33',
-  ]
-%}
+{% set classes = [
+  'layout',
+  'layout--threecol-33-34-33',
+] %}
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
     {% if content.top %}

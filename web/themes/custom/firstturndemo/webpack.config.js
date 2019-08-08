@@ -1,5 +1,5 @@
 const path = require('path'),
-config = require('./config');
+  config = require('./config');
 
 module.exports = {
   entry: {

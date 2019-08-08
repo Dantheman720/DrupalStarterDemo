@@ -30,9 +30,9 @@
 
     {% if tip.list|length %}
       <ul>
-      {% for item in tip.list %}
-        <li{{ tip.attributes }}>{{ item.tip }}</li>
-      {% endfor %}
+        {% for item in tip.list %}
+          <li{{ tip.attributes }}>{{ item.tip }}</li>
+        {% endfor %}
       </ul>
     {% endif %}
 

@@ -11,7 +11,7 @@
     }
   }
 
-  .date{
+  .date {
     color: #666;
   }
 }
@@ -22,12 +22,14 @@
   list-style: none;
   grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
   padding-top: 3rem;
+
   li.is-active {
-    a{
+    a {
       text-decoration: underline;
     }
   }
-  a, a:visited{
+
+  a, a:visited {
     border: 0.1rem solid #666;
     color: #333;
     text-decoration: none;

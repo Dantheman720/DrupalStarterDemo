@@ -1,4 +1,4 @@
-.featured-content-card{
+.featured-content-card {
   display: flex;
   flex-direction: column;
   border: 0.1rem solid #cdcdcd;
@@ -7,8 +7,9 @@
   cursor: pointer;
   min-height: 500px;
   transition: all 0.2s;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+
   &:hover {
     transform: scale(1.02);
   }
@@ -19,7 +20,7 @@
   text-align: center;
 }
 
-.featured-content-card-content, .featured-content-card-author{
+.featured-content-card-content, .featured-content-card-author {
   font-size: 3rem;
 }
 
@@ -28,10 +29,11 @@
 }
 
 
-.secondary-content-list{
+.secondary-content-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin: 3rem 0;
+
   h1 {
     text-align: center;
     font-size: 4rem;
@@ -52,18 +54,27 @@
   align-content: center;
   justify-content: center;
   padding: 2rem 0;
-  .item-title{
+
+  .item-title {
     font-size: 2rem;
+
     a {
       text-decoration: none;
     }
   }
+
   .item-date {
     color: grey;
   }
+
   .item-image {
     grid-column: 1;
+    img {
+      width: 284px;
+      height: 184px;
+    }
   }
+
   .item-content {
     grid-column: 2;
   }

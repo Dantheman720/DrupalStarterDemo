@@ -1,0 +1,22 @@
+<div class="container">
+
+
+  <main class="ftd-main-content" role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="secondary-content-list">
+      <ul class="item-list">
+        {{ listing }}
+      </ul>
+
+    </div>
+
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}

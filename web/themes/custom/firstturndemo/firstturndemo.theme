@@ -1,12 +1,11 @@
 <?php
 
 
-
 function firstturndemo_preprocess(&$variables, $hook)
 {
-  if($hook == 'block'){
+  if ($hook == 'paragraph') {
 
-//    xdebug_break();
+    xdebug_break();
   }
 }
 

@@ -14,12 +14,10 @@
  * @see template_preprocess_admin_block_content()
  */
 #}
-{%
-  set classes = [
-    'list-group',
-    compact ? 'compact',
-  ]
-%}
+{% set classes = [
+  'list-group',
+  compact ? 'compact',
+] %}
 {% if content %}
   <dl{{ attributes.addClass(classes) }}>
     {% for item in content %}

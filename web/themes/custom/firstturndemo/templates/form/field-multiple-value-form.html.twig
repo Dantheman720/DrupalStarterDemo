@@ -21,12 +21,10 @@
 #}
 
 {% if multiple %}
-  {%
-    set classes = [
-      'js-form-item',
-      'form-item'
-    ]
-  %}
+  {% set classes = [
+    'js-form-item',
+    'form-item'
+  ] %}
   <div{{ attributes.addClass(classes) }}>
     {{ table }}
     {% if description.content %}

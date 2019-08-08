@@ -14,9 +14,9 @@
 <p>{{ description }}</p>
 {% if links %}
   <ul>
-  {% for link in links %}
-    <li>{{ link }}</li>
-  {% endfor %}
+    {% for link in links %}
+      <li>{{ link }}</li>
+    {% endfor %}
   </ul>
 {% else %}
   <p>{{ empty }}</p>

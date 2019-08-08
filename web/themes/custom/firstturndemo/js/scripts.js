@@ -1,3 +1,3 @@
-import Navigation from './modules/navigation'
+import General from './modules/general'
 
-let navigation = new Navigation();
+let general = new General();

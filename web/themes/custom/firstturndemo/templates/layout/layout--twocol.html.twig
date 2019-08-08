@@ -10,12 +10,10 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'layout',
-    'layout--twocol',
-  ]
-%}
+{% set classes = [
+  'layout',
+  'layout--twocol',
+] %}
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
     {% if content.top %}

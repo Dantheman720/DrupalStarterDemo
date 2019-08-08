@@ -25,15 +25,13 @@
  * @see template_preprocess_update_project_status()
  */
 #}
-{%
-  set status_classes = [
-    project.status == constant('UPDATE_NOT_SECURE') ? 'project-update__status--security-error',
-    project.status == constant('UPDATE_REVOKED') ? 'project-update__status--revoked',
-    project.status == constant('UPDATE_NOT_SUPPORTED') ? 'project-update__status--not-supported',
-    project.status == constant('UPDATE_NOT_CURRENT') ? 'project-update__status--not-current',
-    project.status == constant('UPDATE_CURRENT') ? 'project-update__status--current',
-  ]
-%}
+{% set status_classes = [
+  project.status == constant('UPDATE_NOT_SECURE') ? 'project-update__status--security-error',
+  project.status == constant('UPDATE_REVOKED') ? 'project-update__status--revoked',
+  project.status == constant('UPDATE_NOT_SUPPORTED') ? 'project-update__status--not-supported',
+  project.status == constant('UPDATE_NOT_CURRENT') ? 'project-update__status--not-current',
+  project.status == constant('UPDATE_CURRENT') ? 'project-update__status--current',
+] %}
 <div{{ status.attributes.addClass('project-update__status', status_classes) }}>
   {%- if status.label -%}
     <span>{{ status.label }}</span>
@@ -63,13 +61,11 @@
   {% endfor %}
 {% endif %}
 
-{%
-  set extra_classes = [
-    project.status == constant('UPDATE_NOT_SECURE') ? 'project-not-secure',
-    project.status == constant('UPDATE_REVOKED') ? 'project-revoked',
-    project.status == constant('UPDATE_NOT_SUPPORTED') ? 'project-not-supported',
-  ]
-%}
+{% set extra_classes = [
+  project.status == constant('UPDATE_NOT_SECURE') ? 'project-not-secure',
+  project.status == constant('UPDATE_REVOKED') ? 'project-revoked',
+  project.status == constant('UPDATE_NOT_SUPPORTED') ? 'project-not-supported',
+] %}
 <div class="project-updates__details">
   {% if extras %}
     <div class="extra">

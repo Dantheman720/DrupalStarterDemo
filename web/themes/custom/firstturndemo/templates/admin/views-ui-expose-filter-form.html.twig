@@ -29,7 +29,7 @@
 
 {% if form.use_operator %}
   <div class="views-left-40">
-  {{ form.use_operator }}
+    {{ form.use_operator }}
   </div>
 {% endif %}
 
@@ -48,15 +48,14 @@
   'value',
   'use_operator',
   'more'
-  )
-%}
+  ) %}
 
 {#
   Only output the right column markup if there's a left column to begin with.
 #}
 {% if form.operator['#type'] %}
   <div class="views-right-60">
-  {{ remaining_form }}
+    {{ remaining_form }}
   </div>
 {% else %}
   {{ remaining_form }}

@@ -22,7 +22,8 @@
       Internet Explorer 9 doesn't recognise source elements that are wrapped in
       picture tags. See http://scottjehl.github.io/picturefill/#ie9
       #}
-      <!--[if IE 9]><video style="display: none;"><![endif]-->
+      <!--[if IE 9]>
+      <video style="display: none;"><![endif]-->
       {% for source_attributes in sources %}
         <source{{ source_attributes }}/>
       {% endfor %}

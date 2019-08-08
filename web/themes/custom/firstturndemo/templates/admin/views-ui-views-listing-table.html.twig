@@ -17,31 +17,31 @@
 #}
 <table{{ attributes.addClass('responsive-enabled') }}>
   <thead>
-    <tr>
-      {% for header in headers %}
-        <th{{ header.attributes }}>{{ header.data }}</th>
-      {% endfor %}
-    </tr>
+  <tr>
+    {% for header in headers %}
+      <th{{ header.attributes }}>{{ header.data }}</th>
+    {% endfor %}
+  </tr>
   </thead>
   <tbody>
-    {% for row in rows %}
-      <tr{{ row.attributes }}>
-        <td class="views-ui-view-name">
-          <h3 data-drupal-selector="views-table-filter-text-source">{{ row.data.view_name.data }}</h3>
-        </td>
-        <td class="views-ui-view-machine-name" data-drupal-selector="views-table-filter-text-source">
-          {{ row.data.machine_name.data }}
-        </td>
-        <td class="views-ui-view-description" data-drupal-selector="views-table-filter-text-source">
-          {{ row.data.description.data }}
-        </td>
-        <td class="views-ui-view-displays">
-          {{ row.data.displays.data }}
-        </td>
-        <td class="views-ui-view-operations">
-          {{ row.data.operations.data }}
-        </td>
-      </tr>
-    {% endfor %}
+  {% for row in rows %}
+    <tr{{ row.attributes }}>
+      <td class="views-ui-view-name">
+        <h3 data-drupal-selector="views-table-filter-text-source">{{ row.data.view_name.data }}</h3>
+      </td>
+      <td class="views-ui-view-machine-name" data-drupal-selector="views-table-filter-text-source">
+        {{ row.data.machine_name.data }}
+      </td>
+      <td class="views-ui-view-description" data-drupal-selector="views-table-filter-text-source">
+        {{ row.data.description.data }}
+      </td>
+      <td class="views-ui-view-displays">
+        {{ row.data.displays.data }}
+      </td>
+      <td class="views-ui-view-operations">
+        {{ row.data.operations.data }}
+      </td>
+    </tr>
+  {% endfor %}
   </tbody>
 </table>

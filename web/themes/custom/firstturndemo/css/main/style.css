@@ -16,7 +16,7 @@
 .nav-list {
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -65,7 +65,7 @@
   cursor: pointer;
   min-height: 500px;
   transition: all 0.2s;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .featured-content-card:hover {
@@ -122,6 +122,10 @@
 .item .item-image {
   grid-column: 1;
 }
+.item .item-image img {
+  width: 284px;
+  height: 184px;
+}
 .item .item-content {
   grid-column: 2;
 }
@@ -157,6 +161,46 @@
   text-decoration: none;
   border-radius: 1rem;
   padding: 2rem;
+}
+
+.event-item {
+  font-size: 1.6rem;
+  margin: 3rem 0;
+}
+.event-item .event-heading {
+  font-size: 3rem;
+}
+.event-item .event-heading a {
+  text-decoration: none;
+  color: #333;
+}
+.event-item .event-date {
+  color: #666;
+}
+.event-item .event-speakers {
+  font-weight: 700;
+}
+.event-item .speaker {
+  padding: 0.5rem 0;
+}
+.event-item .speaker-info {
+  display: none;
+}
+.event-item .speaker-info > * {
+  padding: 1rem 0;
+}
+.event-item .event-speakers-info {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.main_page-content {
+  grid-column: 2/10;
+  font-size: 1.6rem;
+}
+.main_page-content h1 {
+  font-size: 3rem;
+  text-align: center;
 }
 
 body {

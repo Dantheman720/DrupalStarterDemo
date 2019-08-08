@@ -15,13 +15,11 @@
  * @see template_preprocess_views_ui_display_tab_bucket()
  */
 #}
-{%
-  set classes = [
-    'views-ui-display-tab-bucket',
-    name ? name|clean_class,
-    overridden ? 'overridden',
-  ]
-%}
+{% set classes = [
+  'views-ui-display-tab-bucket',
+  name ? name|clean_class,
+  overridden ? 'overridden',
+] %}
 <div{{ attributes.addClass(classes) }}>
   {% if title -%}
     <h3 class="views-ui-display-tab-bucket__title">{{ title }}</h3>

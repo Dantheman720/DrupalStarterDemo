@@ -18,13 +18,15 @@
 <table class="system-status-report">
   <tbody>
   {% for requirement in requirements %}
-    <tr class="system-status-report__entry system-status-report__entry--{{ requirement.severity_status }} color-{{ requirement.severity_status }}">
+    <tr
+      class="system-status-report__entry system-status-report__entry--{{ requirement.severity_status }} color-{{ requirement.severity_status }}">
       {% if requirement.severity_status in ['warning', 'error'] %}
-        <th class="system-status-report__status-title system-status-report__status-icon system-status-report__status-icon--{{ requirement.severity_status }}">
-          <span class="visually-hidden">{{ requirement.severity_title }}</span>
-      {% else %}
-        <th class="system-status-report__status-title">
-      {% endif %}
+      <th
+        class="system-status-report__status-title system-status-report__status-icon system-status-report__status-icon--{{ requirement.severity_status }}">
+        <span class="visually-hidden">{{ requirement.severity_title }}</span>
+        {% else %}
+      <th class="system-status-report__status-title">
+        {% endif %}
         {{ requirement.title }}
       </th>
       <td>

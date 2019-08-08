@@ -16,15 +16,13 @@
  * @see template_preprocess_views_ui_display_tab_setting()
  */
 #}
-{%
-  set classes = [
-    'views-display-setting',
-    'clearfix',
-    'views-ui-display-tab-setting',
-    defaulted ? 'defaulted',
-    overridden ? 'overridden',
-]
-%}
+{% set classes = [
+  'views-display-setting',
+  'clearfix',
+  'views-ui-display-tab-setting',
+  defaulted ? 'defaulted',
+  overridden ? 'overridden',
+] %}
 <div{{ attributes.addClass(classes) }}>
   {% if description -%}
     <span class="label">{{ description }}</span>

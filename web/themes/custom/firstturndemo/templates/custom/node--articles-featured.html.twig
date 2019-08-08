@@ -77,15 +77,15 @@
   'body': content.body,
 } %}
 
-  <ul class="item-list">
-    <li class="item">
-      <div class="item-image"><img src="{{ items.field_image }}" alt=""></div>
-      <div class="item-content">
-        <h3 class="item-title"><a href={{ url }}>{{ node_title }}</a></h3>
-        <p class="item-date">{{node_created_date}}</p>
-        <p class="item-summary">{{ items.body | length > 350 ? items.body | slice(0, 350) ~ '...' : items.body }}</p>
-      </div>
-    </li>
-  </ul>
+<ul class="item-list">
+  <li class="item">
+    <div class="item-image"><img src="{{ items.field_image }}" alt=""></div>
+    <div class="item-content">
+      <h3 class="item-title"><a href={{ url }}>{{ node_title }}</a></h3>
+      <p class="item-date">{{ node_created_date }}</p>
+      <p class="item-summary">{{ items.body | length > 350 ? items.body | slice(0, 350) ~ '...' : items.body }}</p>
+    </div>
+  </li>
+</ul>
 
 

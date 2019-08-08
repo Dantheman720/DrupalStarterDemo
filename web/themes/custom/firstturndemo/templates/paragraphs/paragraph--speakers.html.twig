@@ -1,0 +1,14 @@
+{% set speaker_info = {
+  'speaker_name' : content.field_speaker.0['#title'],
+  'speaker_bio' : content.field_bio.0['#context'].value,
+  'speaker_website' : content.field_website.0['#url_title'],
+
+} %}
+
+<div class="speaker">
+  <div class="speaker-name">{{ speaker_info.speaker_name }} - (Click for more info)</div>
+  <div class="speaker-info">
+    <div class="speaker-bio">{{ speaker_info.speaker_bio }}</div>
+    <div class="speaker-website"><a href={{ speaker_info.speaker_website }}>Speaker Website</a></div>
+  </div>
+</div>

@@ -29,9 +29,9 @@
 
   {%- if items -%}
     <{{ list_type }}{{ attributes }}>
-      {%- for item in items -%}
-        <li{{ item.attributes }}>{{ item.value }}</li>
-      {%- endfor -%}
+    {%- for item in items -%}
+      <li{{ item.attributes }}>{{ item.value }}</li>
+    {%- endfor -%}
     </{{ list_type }}>
   {%- else -%}
     {{- empty -}}

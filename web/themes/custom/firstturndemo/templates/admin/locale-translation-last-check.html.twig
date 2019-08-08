@@ -14,10 +14,10 @@
 #}
 <div class="locale checked">
   <p>
-  {% if last_checked %}
-    {% trans %} Last checked: {{ time }} ago {% endtrans %}
-  {% else %}
-    {{ 'Last checked: never'|t }}
-  {% endif %}
-  <span class="check-manually">({{ link }})</span></p>
+    {% if last_checked %}
+      {% trans %} Last checked: {{ time }} ago {% endtrans %}
+    {% else %}
+      {{ 'Last checked: never'|t }}
+    {% endif %}
+    <span class="check-manually">({{ link }})</span></p>
 </div>
